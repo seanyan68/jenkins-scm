@@ -9,22 +9,24 @@ pipeline {
         stage('Checkout SCM'){
             steps {
                 checkout scm;
+                sh 'echo checkout OK'
             }
         }
         stage('Build Stage') {
             steps {
                 sh 'chmod +x app.sh'
                 sh 'sh app.sh'
+                sh 'echo Build OK'
             }
         }
         stage('Testing Stage') {
             steps {
-                sh 'echo HelloWorld'
+                sh 'echo Testing'
             }
         }
         stage('Deploy Stage') {
             steps {
-                sh 'echo HelloWorld'
+                sh 'echo Deploy'
             }
         }
     }
