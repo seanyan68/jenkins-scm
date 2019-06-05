@@ -9,6 +9,7 @@ pipeline {
         stage('Checkout SCM'){
             steps {
                 checkout scm;
+		printMessage("checkout branch [${env.BRANCH_NAME}]")
                 sh 'echo checkout OK'
             }
         }
