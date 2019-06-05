@@ -27,10 +27,5 @@ pipeline {
                 sh 'echo HelloWorld'
             }
         }
-         stage('Archive Artifact') {
-            steps {
-                sh 'echo Archiving'
-            }
-        }
     }
 }
